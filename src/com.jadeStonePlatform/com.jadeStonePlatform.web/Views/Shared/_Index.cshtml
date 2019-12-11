@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    @*<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache,no-store, must-revalidate">
+        <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+        <META HTTP-EQUIV="expires" CONTENT="0">*@
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/css/swiper.min.css">
+    <link rel="shortcut icon" href="~/favicon.ico" />
+    <link rel="bookmark" href="~/favicon.ico" />
+    <link rel="icon" href="~/favicon.ico" />
+    <script src="/js/swiper.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .dv-footer {
+            width: 100%;
+            padding: 10px 0;
+            border-top: 1px solid #e3e3e3;
+            font-size: 14px;
+            color: #939393;
+            text-align: center;
+            display: block;
+        }
+
+        .dv-footer-container {
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+            text-align: center;
+        }
+            .dv-footer-container a {
+                text-decoration: none;
+                height: 20px;
+                line-height: 20px;
+                color: #939393;
+            }
+            .p-Copyright {
+                float: left;
+                line-height: 20px;
+                height: 20px;
+                width: 100%;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+            }
+
+            .p-Copyright span {
+                margin: 0 5px;
+            }
+    </style>
+</head>
+<body>
+    @RenderBody()
+    @Html.AntiForgeryToken()
+    <div class="dv-footer">
+        <div class="dv-footer-container">
+            <p class="p-Copyright" style="display:none">
+                <a target="_blank" href="http://www.baidu.com">
+                   百度
+                </a>
+                <span>|</span>
+                <a target="_blank" href="http://www.sogou.com">
+                    搜狗
+                </a>
+            </p>
+            <p class="p-Copyright">
+                Copyright © LiJ
+                <span>|</span>
+                <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32058302002520">
+                    <img src="~/images/batb.png" style="margin-bottom: -5px;" />
+                    苏公网安备 32058302002520号
+                </a>
+                <span>|</span>
+                沪ICP备19043973号
+            </p>
+            <p class="p-Copyright">
+                QQ：562022699
+                <span>|</span>
+                微信：lijiantom2011
+                <span>|</span>
+                邮箱：lijiantom@outlook.com
+            </p>
+        </div>
+    </div>
+</body>
+</html>

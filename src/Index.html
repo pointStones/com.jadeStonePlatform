@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="content/js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="content/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="content/css/swiper.min.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="bookmark" href="/favicon.ico" />
+    <script src="content/js/swiper.min.js"></script>
+    <script src="content/js/TweenMax.min.js"></script>
+</head>
+<style>
+    body {
+        position: relative;
+        height: 100%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+    }
+
+    .swiper-container {
+        background: #007e56;
+        width: 100%;
+        height: 15rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .dv-nav {
+        height: 2.5rem;
+        background: #007e56;
+    }
+
+    .tb-nav {
+        width: 100%;
+        height: 100%;
+    }
+
+        .tb-nav td {
+            text-align: center;
+            color: #fff;
+            font-weight: 400;
+        }
+
+    .dv-dotting {
+        height: 12rem;
+        width: 100%;
+    }
+
+    #dv_product {
+        position: relative;
+    }
+
+    .dv-rough-nva {
+        display: inline-block;
+        width: 94%;
+        text-align: left;
+        padding: 1% 2%;
+        margin: 1rem 0.2rem 0.2rem 0.2rem;
+        background-color: #007e56;
+        border-radius: 0.2rem;
+        color: #fff;
+    }
+
+    .dv-appointment {
+        height: 3rem;
+        width: 100%;
+        background: #000;
+        filter: alpha(Opacity=80);
+        -moz-opacity: 0.8;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        _position: absolute;
+        /* _top: expression(document.scrollTop+documentElement.clientHeight-this.offsetHeight); */
+    }
+
+        .dv-appointment table {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+            .dv-appointment table td {
+                width: 50%;
+                text-align: center;
+                vertical-align: bottom;
+            }
+
+            .dv-appointment table span {
+                display: inline-table;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                vertical-align: middle;
+                margin-top: -1.5rem;
+                color: #fff;
+            }
+
+    #dv_contactUs {
+        margin-top: 1rem;
+    }
+
+        #dv_contactUs table td {
+            text-align: center;
+        }
+
+    .sp-icon {
+        padding: 0.2rem;
+        background: #fff;
+        border-radius: 0.2rem 0 0 0.2rem;
+        line-height: 2rem;
+        width: 2rem;
+        color: #ccc;
+    }
+
+    .input-c1 {
+        padding: 0.15rem 0.2rem;
+        border-radius: 0 0.2rem 0.2rem 0;
+        background-color: #fff;
+        border: none;
+        height: 1.2rem;
+    }
+
+    .sp-enquiry {
+        background-color: #05c639;
+        border: none;
+        border-radius: 0.5rem;
+        width: 55%;
+        color: #fff;
+        height: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    #dv_business ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        #dv_business ul li {
+            float: left;
+            margin: 0.4rem;
+            padding: 0.5rem;
+            background-color: #05c639;
+            width: 5.5rem;
+            border-radius: 0.5rem;
+            color: #ffffff;
+            font-weight: bolder;
+        }
+</style>
+
+<body id="b_content">
+    <div class="swiper-container" id="dv_index">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="content/img/20190810193821.jpg" alt="\" title="" width="100%"
+                     height="100%" />
+            </div>
+            <div class="swiper-slide">
+                <img src="content/img/20190810193837.jpg" alt="\" title="" width="100%"
+                     height="100%" />
+            </div>
+            <div class="swiper-slide">
+                <img src="content/img/20190810193802.jpg" alt="\" title="" width="100%"
+                     height="100%" />
+            </div>
+            <div class="swiper-slide">
+                <img src="content/img/20190810193841.jpg" alt="\" title="" width="100%"
+                     height="100%" />
+            </div>
+            <div class="swiper-slide">
+                <img src="content/img/20190810193844.jpg" alt="\" title="" width="100%"
+                     height="100%" />
+            </div>
+            <div class="swiper-slide">
+                <img src="content/img/20190810193849.jpg" alt="\" title="" width="100%"
+                     height="100%" />
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+    <div class="dv-nav">
+        <table class="tb-nav">
+            <tr>
+                <td><a herf="#b_content" id="link_index">首页</a></td>
+                <td id="link_business">业务</td>
+                <td><a herf="#dv_product" id="link_product">产品展示</a></td>
+                <td><a herf="#dv_contactUs" id="link_contact">联系我们</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="dv-dotting">
+        <div style="width: 44%;margin: 1rem 6%; float: left; height: 10rem;text-align: center;">
+            <img src="content/img/201904021554196384709820.png" alt="\" title="" width="90%" />
+        </div>
+        <div style="float: left;width: 40%;margin-top: 1.5rem;padding-right: 2%;font-size: 0.5rem">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有人说顶级的极品翡翠就是百分百完美的，其实最顶级的翡翠也不是完全没有任何瑕疵，只是相对完美一些而已。看一件翡翠，如果因为过分苛求完美，把翡翠的天然属性当成瑕疵，那么将错失心仪的好翡翠，这一年遗憾的事！
+        </div>
+    </div>
+    <div id="dv_business">
+        <span class="dv-rough-nva">
+            我们业务
+        </span>
+        <div>
+            <div style="padding: 1rem; color: #05c639; font-weight: bolder; font-size: 2rem;">专注翡翠原石十余载</div>
+            <div style="padding: 1rem; color: #05c639; font-weight: bolder; font-size: 2rem; text-align: right;">高端翡翠原石供应商</div>
+            <div style="width: 100%; display: inline-block;">
+                <ul>
+                    <li>矿区直供</li>
+                    <li>一手资源</li>
+                    <li>400吨高货</li>
+                    <li>视屏选货</li>
+                    <li>朋友圈选货</li>
+                </ul>
+            </div>
+            <div style="width: 100%; padding: 0.5rem; font-weight: bolder; font-size: 2rem;">优选矿区精选优质的翡翠原石毛料</div>
+            <div style="margin: 0.5rem; display: inline-block;">
+                <span>莫湾基场口、会卡场口、后江场口、帕敢场口、莫西沙场口、木那场口、大马坎场口</span>
+            </div>
+        </div>
+    </div>
+    <div id="dv_product">
+        <span class="dv-rough-nva">
+            翡翠原石
+        </span>
+        <div style="text-align: center;">
+            <img src="content/img/20190811000838.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="margin: 0.5rem">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选购翡翠毛料是一件很费力的过程，算起来它还是石头，没有进行过加工，所以这都需要我们的师傅拥有很长时间的选毛料经验，否则很容易选到品质差的毛料。我们每次选购翡翠毛料都是有超过10年以上的选购毛料经验的师傅带队！
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811000146.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811000712.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811000639.png" alt="\" title="" width="98%" />
+        </div>
+        <div class="dv-rough-nva">
+            取色、设计、切割
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811001655.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="margin: 0.5rem">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;都说“不怕买错料，就怕切错料”如果一刀切错，可能本来能出一只满绿的手镯就被切没了。所以拿到一块翡翠原石，会先仔细的观摩，因为都是纯天然的，所以要根据原石的形态进行取色、设计，每位出色的雕刻师都会很好的选择避开原石上的裂纹、黑点、瑕疵。让每一块翡翠原石都可以把最美的一面呈现给大家。
+            这是最考验设计师的环节。
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811001726.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811001924.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811002932.png" alt="\" title="" width="98%" />
+        </div>
+    </div>
+    <div id="dv_product_finished">
+        <div class="dv-rough-nva">
+            成品展示
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811002950.png" alt="\" title="" width="98%" />
+        </div>
+        <div style="text-align: center;">
+            <img src="content/img/20190811001759.png" alt="\" title="" width="98%" />
+        </div>
+    </div>
+    <div id="dv_contactUs">
+        <span class="dv-rough-nva">
+            联系我们
+        </span>
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 35%; font-weight: bolder; font-size: 3rem;">切石</td>
+                <td style="width: 10%;">直播</td>
+                <td style="width: 10%;">加微</td>
+                <td><img src="content/img/ewm.png" style=" width: 90%;" /></td>
+            </tr>
+            <tr>
+                <td colspan="4">询价送<span style="color: #fee663; font-weight: bolder; font-size: 2rem; margin: 0 0.2rem;">1000</span>元原石代金券或<span style="color: #fee663; font-weight: bolder; font-size: 2rem; margin: 0 0.2rem;">原石</span>一枚！</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="padding-top: 1rem;">
+                    <span>
+                        <span class="sp-icon"><i class="fa fa-user-circle fa-fw"></i></span>
+                        <input type="text" id="txtxm" class="input-c1" value="" placeholder="姓名" />
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <span>
+                        <span class="sp-icon"><i class="fa fa-mobile-phone fa-fw"></i></span>
+                        <input type="text" id="txtxm" class="input-c1" value="" placeholder="电话" />
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <span>
+                        <span class="sp-icon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                        <input type="text" id="txtxm" class="input-c1" value="" placeholder="邮箱" />
+                    </span>
+                </td>
+            </tr>
+            <tr><td colspan="6"><button type="button" class="sp-enquiry">询价</button></td></tr>
+        </table>
+    </div>
+    <div style="height: 3rem; width: 100%; display: inline-block;"></div>
+    <div class="dv-appointment">
+        <table>
+            <tr>
+                <td>
+                    <a href="#dv_contactUs" class="col-xs-11">
+                        <img src="content/img/rwm.png" alt="" height="70%">
+                        <span>扫描二维码</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="tel:18116350181">
+                        <img src="content/img/tel.png" alt="" height="70%">
+                        <span>拨打电话</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        keyboard: true,
+        loop: true,
+        speed: 600,
+        autoplay: true,
+        autoplay: {
+            delay: 2000
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    });
+    $(function () {
+        $('#link_index').click(function () {
+            $('html,body').animate({ scrollTop: $("#dv_index").offset().top - 8 }, 200);
+        });
+        $('#link_product').click(function () {
+            $('html,body').animate({ scrollTop: $("#dv_product").offset().top - 100 }, 200);
+        });
+        $('#link_business').click(function () {
+            $('html,body').animate({ scrollTop: $("#dv_product").offset().top - 100 }, 200);
+        });
+        $('#link_contact').click(function () {
+            $('html,body').animate({ scrollTop: $("#dv_contactUs").offset().top - 100 }, 200);
+        });
+    });
+
+</script>
